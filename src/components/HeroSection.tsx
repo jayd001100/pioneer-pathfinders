@@ -22,7 +22,7 @@ const HeroSection = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground leading-tight mb-6 animate-fade-up animation-delay-100">
+          <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.2] mb-6 animate-fade-up animation-delay-100">
             Empowering Students to Make{" "}
             <span className="text-gradient">Confident Career Decisions</span>
           </h1>
