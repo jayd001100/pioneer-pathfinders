@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -27,6 +27,13 @@ const Footer = () => {
     ],
   };
 
+  const socialLinks = [
+    { name: "Twitter", icon: Twitter, href: "#" },
+    { name: "LinkedIn", icon: Linkedin, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "#" },
+    { name: "YouTube", icon: Youtube, href: "#" },
+  ];
+
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 sm:px-6">
@@ -47,15 +54,14 @@ const Footer = () => {
               realistic career decisions from Class 9 through 12 and beyond.
             </p>
             <div className="flex items-center gap-4">
-              {/* Social Links */}
-              {["twitter", "linkedin", "instagram", "youtube"].map((social) => (
+              {socialLinks.map((social) => (
                 <a
-                  key={social}
-                  href="#"
+                  key={social.name}
+                  href={social.href}
                   className="w-10 h-10 rounded-lg bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
+                  aria-label={social.name}
                 >
-                  <span className="sr-only">{social}</span>
-                  <div className="w-4 h-4" />
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
